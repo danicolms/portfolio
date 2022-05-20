@@ -25132,6 +25132,7 @@ const projects = [
         emoji: '🔀'
     }
 ];
+console.log('Running v1.0.1');
 const App = ()=>{
     _s();
     const [current, setCurrent] = _react.useState(0);
@@ -25149,7 +25150,7 @@ const App = ()=>{
                     children: " Mis proyectos"
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 40,
+                    lineNumber: 41,
                     columnNumber: 5
                 }, undefined),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SProjectContainer, {
@@ -25159,12 +25160,12 @@ const App = ()=>{
                             ,
                             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_previous.SPrevious, {}, void 0, false, {
                                 fileName: "src/App.tsx",
-                                lineNumber: 43,
+                                lineNumber: 44,
                                 columnNumber: 7
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 42,
+                            lineNumber: 43,
                             columnNumber: 6
                         }, undefined),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_indexDefault.default, {
@@ -25173,7 +25174,7 @@ const App = ()=>{
                             emoji: projects[current].emoji
                         }, void 0, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 46,
+                            lineNumber: 47,
                             columnNumber: 6
                         }, undefined),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SIconContainer, {
@@ -25181,29 +25182,29 @@ const App = ()=>{
                                 onClick: ()=>handlePaging(EPagingTypes.NEXT)
                             }, void 0, false, {
                                 fileName: "src/App.tsx",
-                                lineNumber: 48,
+                                lineNumber: 49,
                                 columnNumber: 7
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 47,
+                            lineNumber: 48,
                             columnNumber: 6
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/App.tsx",
-                    lineNumber: 41,
+                    lineNumber: 42,
                     columnNumber: 5
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/App.tsx",
-            lineNumber: 39,
+            lineNumber: 40,
             columnNumber: 4
         }, undefined)
     }, void 0, false, {
         fileName: "src/App.tsx",
-        lineNumber: 38,
+        lineNumber: 39,
         columnNumber: 10
     }, undefined);
 };
@@ -25217,157 +25218,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./App.styles":"cvbPE","./components/Project/index":"ePIR4","./components/Next":"9hsXD","./components/Previous":"2ZLok"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, '__esModule', {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"km3Ru":[function(require,module,exports) {
-"use strict";
-var Refresh = require('react-refresh/runtime');
-function debounce(func, delay) {
-    var args1;
-    var timeout = undefined;
-    return function(args) {
-        clearTimeout(timeout);
-        timeout = setTimeout(function() {
-            timeout = undefined;
-            func.call(null, args);
-        }, delay);
-    };
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30); // Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module.id + ' ' + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
-};
-module.exports.postlude = function(module) {
-    if (isReactRefreshBoundary(module.exports)) {
-        registerExportsForReactRefresh(module);
-        if (module.hot) {
-            module.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module.exports;
-            });
-            module.hot.accept(function(getParents) {
-                var prevExports = module.hot.data.prevExports;
-                var nextExports = module.exports; // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
-        }
-    }
-};
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === '__esModule') continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
-        return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
-}
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-} // When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        if (key === '__esModule') continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
-}
-function registerExportsForReactRefresh(module) {
-    var exports = module.exports, id = module.id;
-    Refresh.register(exports, id + ' %exports%');
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        Refresh.register(exportValue, id + ' %exports% ' + key);
-    }
-}
-
-},{"react-refresh/runtime":"786KC"}],"cvbPE":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./App.styles":"cvbPE","./components/Next":"9hsXD","./components/Previous":"2ZLok","./components/Project/index":"ePIR4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cvbPE":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "SBackground", ()=>SBackground
@@ -26948,7 +26799,37 @@ function stylis_min(W) {
 }
 exports.default = stylis_min;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"pVndT":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, '__esModule', {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === 'default' || key === '__esModule' || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"pVndT":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var unitlessKeys = {
@@ -27121,7 +27002,221 @@ const theme = {
 };
 exports.default = theme;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"ePIR4":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9hsXD":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d05e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d05e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SNext", ()=>SNext
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _styledComponents = require("styled-components");
+var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
+const StyledPushChevronRightR = _styledComponentsDefault.default.i.withConfig({
+    displayName: "Next__StyledPushChevronRightR",
+    componentId: "sc-1iqjcor-0"
+})([
+    " &{box-sizing:border-box;position:relative;display:block;transform:scale(var(--ggs,1));width:22px;height:22px;border:2px solid;border-radius:4px;}&::after,&::before{content:'';display:block;box-sizing:border-box;position:absolute;width:2px;height:8px;border-right:2px solid;top:5px;right:5px;}&::after{width:6px;height:6px;border-bottom:2px solid;transform:rotate(-45deg);right:9px;top:6px;}"
+]);
+_c = StyledPushChevronRightR;
+const SNext = /*#__PURE__*/ _reactDefault.default.forwardRef(_c1 = (props, ref)=>{
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(StyledPushChevronRightR, {
+            ...props,
+            ref: ref,
+            "icon-role": "push-chevron-right-r"
+        }, void 0, false, {
+            fileName: "src/components/Next.tsx",
+            lineNumber: 8,
+            columnNumber: 12
+        }, undefined)
+    }, void 0, false);
+});
+_c2 = SNext;
+var _c, _c1, _c2;
+$RefreshReg$(_c, "StyledPushChevronRightR");
+$RefreshReg$(_c1, "SNext$React.forwardRef");
+$RefreshReg$(_c2, "SNext");
+
+  $parcel$ReactRefreshHelpers$d05e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"km3Ru":[function(require,module,exports) {
+"use strict";
+var Refresh = require('react-refresh/runtime');
+function debounce(func, delay) {
+    var args1;
+    var timeout = undefined;
+    return function(args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = undefined;
+            func.call(null, args);
+        }, delay);
+    };
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30); // Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module.id + ' ' + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module) {
+    if (isReactRefreshBoundary(module.exports)) {
+        registerExportsForReactRefresh(module);
+        if (module.hot) {
+            module.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module.exports;
+            });
+            module.hot.accept(function(getParents) {
+                var prevExports = module.hot.data.prevExports;
+                var nextExports = module.exports; // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === '__esModule') continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+} // When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        if (key === '__esModule') continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module) {
+    var exports = module.exports, id = module.id;
+    Refresh.register(exports, id + ' %exports%');
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        Refresh.register(exportValue, id + ' %exports% ' + key);
+    }
+}
+
+},{"react-refresh/runtime":"786KC"}],"2ZLok":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$25e9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$25e9.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "SPrevious", ()=>SPrevious
+);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _styledComponents = require("styled-components");
+var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
+const StyledPushChevronLeftR = _styledComponentsDefault.default.i.withConfig({
+    displayName: "Previous__StyledPushChevronLeftR",
+    componentId: "sc-qcoghs-0"
+})([
+    " &{box-sizing:border-box;position:relative;display:block;transform:scale(var(--ggs,1));width:22px;height:22px;border:2px solid;border-radius:4px;}&::after,&::before{content:'';display:block;box-sizing:border-box;position:absolute;width:2px;height:8px;border-left:2px solid;top:5px;left:5px;}&::after{width:6px;height:6px;border-bottom:2px solid;transform:rotate(45deg);left:9px;top:6px;}"
+]);
+_c = StyledPushChevronLeftR;
+const SPrevious = /*#__PURE__*/ _reactDefault.default.forwardRef(_c1 = (props, ref)=>{
+    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
+        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(StyledPushChevronLeftR, {
+            ...props,
+            ref: ref,
+            "icon-role": "push-chevron-left-r"
+        }, void 0, false, {
+            fileName: "src/components/Previous.tsx",
+            lineNumber: 8,
+            columnNumber: 12
+        }, undefined)
+    }, void 0, false);
+});
+_c2 = SPrevious;
+var _c, _c1, _c2;
+$RefreshReg$(_c, "StyledPushChevronLeftR");
+$RefreshReg$(_c1, "SPrevious$React.forwardRef");
+$RefreshReg$(_c2, "SPrevious");
+
+  $parcel$ReactRefreshHelpers$25e9.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ePIR4":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$8e72 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27203,15 +27298,9 @@ var _styledComponents = require("styled-components");
 var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
 var _theme = require("../../theme");
 var _themeDefault = parcelHelpers.interopDefault(_theme);
-const appear = _styledComponents.keyframes`
-  from {
-    opacity: 0;
-  }
-
-  to {
-   opacity: 1;
-  }
-`;
+const appear = _styledComponents.keyframes([
+    "from{opacity:0;}to{opacity:1;}"
+]);
 const SProject = _styledComponentsDefault.default.div.withConfig({
     displayName: "styles__SProject",
     componentId: "sc-1gc2ao3-0"
@@ -27241,100 +27330,6 @@ const SButton = _styledComponentsDefault.default.button.withConfig({
     ";}"
 ], _themeDefault.default.colors.black, _themeDefault.default.colors.black, _themeDefault.default.colors.yellow);
 
-},{"styled-components":"1U3k6","../../theme":"ciFvo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9hsXD":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$d05e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$d05e.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "SNext", ()=>SNext
-);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _styledComponents = require("styled-components");
-var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
-const StyledPushChevronRightR = _styledComponentsDefault.default.i.withConfig({
-    displayName: "Next__StyledPushChevronRightR",
-    componentId: "sc-1iqjcor-0"
-})([
-    " &{box-sizing:border-box;position:relative;display:block;transform:scale(var(--ggs,1));width:22px;height:22px;border:2px solid;border-radius:4px;}&::after,&::before{content:'';display:block;box-sizing:border-box;position:absolute;width:2px;height:8px;border-right:2px solid;top:5px;right:5px;}&::after{width:6px;height:6px;border-bottom:2px solid;transform:rotate(-45deg);right:9px;top:6px;}"
-]);
-_c = StyledPushChevronRightR;
-const SNext = /*#__PURE__*/ _reactDefault.default.forwardRef(_c1 = (props, ref)=>{
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(StyledPushChevronRightR, {
-            ...props,
-            ref: ref,
-            "icon-role": "push-chevron-right-r"
-        }, void 0, false, {
-            fileName: "src/components/Next.tsx",
-            lineNumber: 8,
-            columnNumber: 12
-        }, undefined)
-    }, void 0, false);
-});
-_c2 = SNext;
-var _c, _c1, _c2;
-$RefreshReg$(_c, "StyledPushChevronRightR");
-$RefreshReg$(_c1, "SNext$React.forwardRef");
-$RefreshReg$(_c2, "SNext");
-
-  $parcel$ReactRefreshHelpers$d05e.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2ZLok":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$25e9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$25e9.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "SPrevious", ()=>SPrevious
-);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _styledComponents = require("styled-components");
-var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
-const StyledPushChevronLeftR = _styledComponentsDefault.default.i.withConfig({
-    displayName: "Previous__StyledPushChevronLeftR",
-    componentId: "sc-qcoghs-0"
-})([
-    " &{box-sizing:border-box;position:relative;display:block;transform:scale(var(--ggs,1));width:22px;height:22px;border:2px solid;border-radius:4px;}&::after,&::before{content:'';display:block;box-sizing:border-box;position:absolute;width:2px;height:8px;border-left:2px solid;top:5px;left:5px;}&::after{width:6px;height:6px;border-bottom:2px solid;transform:rotate(45deg);left:9px;top:6px;}"
-]);
-_c = StyledPushChevronLeftR;
-const SPrevious = /*#__PURE__*/ _reactDefault.default.forwardRef(_c1 = (props, ref)=>{
-    return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
-        children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(StyledPushChevronLeftR, {
-            ...props,
-            ref: ref,
-            "icon-role": "push-chevron-left-r"
-        }, void 0, false, {
-            fileName: "src/components/Previous.tsx",
-            lineNumber: 8,
-            columnNumber: 12
-        }, undefined)
-    }, void 0, false);
-});
-_c2 = SPrevious;
-var _c, _c1, _c2;
-$RefreshReg$(_c, "StyledPushChevronLeftR");
-$RefreshReg$(_c1, "SPrevious$React.forwardRef");
-$RefreshReg$(_c2, "SPrevious");
-
-  $parcel$ReactRefreshHelpers$25e9.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","styled-components":"1U3k6","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lW6qc":[function() {},{}]},["kn9T2","7fmqN","8lqZg"], "8lqZg", "parcelRequire8d9d")
+},{"styled-components":"1U3k6","../../theme":"ciFvo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lW6qc":[function() {},{}]},["kn9T2","7fmqN","8lqZg"], "8lqZg", "parcelRequire8d9d")
 
 //# sourceMappingURL=index.975ef6c8.js.map
