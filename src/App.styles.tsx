@@ -26,13 +26,19 @@ export const SContainer = styled.main`
 `;
 
 export const STitle = styled.h1`
+	@media (min-width: 480px) {
+		& {
+			font-size: 64px;
+		}
+	}
+
 	font-family: 'Space Mono', monospace;
 	font-weight: bold;
 	opacity: 75%;
 	margin: 0;
 	margin-bottom: .5em;
 	margin-top: .3em;
-	font-size: 64px;
+	font-size: 40px;
 	color: black;
 	user-select: none;
 	text-align: center;
@@ -44,7 +50,8 @@ export const SProjectContainer = styled.section`
 	align-items: center;
 	justify-content: space-between;
 	margin-top: 2.5em;
-	width: 45%;
+	width: 100%;
+	max-width: 25em;
 `;
 
 export const SIconContainer = styled.div`
