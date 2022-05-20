@@ -26,6 +26,7 @@ const projects = [
 		emoji: '🔀'
 	}
 ];
+console.log('Running v1.0.1');
 
 export const App: React.FunctionComponent = () => {
 	const [ current, setCurrent ] = useState<number>(0);
