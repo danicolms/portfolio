@@ -1,6 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import theme from '../../theme';
 
+
 const appear = keyframes`
   from {
     opacity: 0;
@@ -18,13 +19,13 @@ export const SProject = styled.div`
 `;
 
 export const SCaption = styled.span`
-	font-family: 'Space Mono', monospace;
+	font-family: 'Roboto Mono', monospace;
 	font-weight: bold;
 	opacity: 75%;
 	margin: .5em;
 	margin-top: 1.5em;
-	font-size: 24px;
-	color: black;
+	font-size: 20px;
+	color: ${theme.colors.black};
 	user-select: none;
 	text-align: center;
 	line-height: 1;
@@ -32,7 +33,7 @@ export const SCaption = styled.span`
 
 export const SEmoji = styled.span`
 	animation: 1s ease-out 0s 1 ${appear};
-	font-family: 'Space Mono', monospace;
+	font-family: 'Roboto Mono', monospace;
 	margin-top: .3em;
 	/* margin-bottom: .2em; */
 	font-size: 120px;
@@ -48,7 +49,7 @@ export const SButton = styled.button`
 	color: ${theme.colors.black};
 	background: transparent;
 	font-family: 'Space Mono', monospace;
-	font-size: 16px;
+	font-size: 14px;
 	max-width: 160px;
 	padding: .4em 3em;
 	border-radius: 2px;

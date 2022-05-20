@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SBackground, SContainer, SIconContainer, SProjectContainer, STitle } from './App.styles';
+import { SBackground, SCredit, SImage, SSocialContainer, SContainer, SIconContainer, SProjectContainer, STitle } from './App.styles';
 import { SNext } from './components/Next';
 import { SPrevious } from './components/Previous';
 import Project from './components/Project/index';
@@ -11,23 +11,33 @@ enum EPagingTypes {
 
 const projects = [
 	{
-		title: 'LA CAJA',
+		title: 'la caja',
 		src: 'https://danicolms.github.io/rotating-box/',
 		emoji: '📦'
 	},
 	{
-		title: 'EL RELOJ',
+		title: 'el reloj',
 		src: 'https://danicolms.github.io/word-clock/',
 		emoji: '🕰️'
 	},
 	{
-		title: 'LINEAS CRUZADAS',
+		title: 'lineas cruzadas',
 		src: 'https://danicolms.github.io/intersecting-lines/',
 		emoji: '🔀'
 	}
 ];
-console.log('Running v1.0.1');
+console.log('💡 Running v1.0.2');
 
+	// Images URL
+	const instagram  = new URL(
+		'assets/instagram.png',
+		import.meta.url
+	  );
+	  const github  = new URL(
+		'assets/github.png',
+		import.meta.url
+	  );
+	  
 export const App: React.FunctionComponent = () => {
 	const [ current, setCurrent ] = useState<number>(0);
 
@@ -46,9 +56,9 @@ export const App: React.FunctionComponent = () => {
 	return (
 		<SBackground>
 			<SContainer>
-				<STitle> Mis proyectos</STitle>
+				<STitle> @danicolms </STitle>
 				<SProjectContainer>
-					<SIconContainer onClick={() => handlePaging(EPagingTypes.PREVIOUS)}>
+					<SIconContainer disabled={!(current - 1 >= 0)} onClick={() => handlePaging(EPagingTypes.PREVIOUS)}>
 						<SPrevious />
 					</SIconContainer>
 
@@ -57,10 +67,23 @@ export const App: React.FunctionComponent = () => {
 						title={projects[current].title}
 						emoji={projects[current].emoji}
 					/>
-					<SIconContainer>
-						<SNext onClick={() => handlePaging(EPagingTypes.NEXT)} />
+					<SIconContainer disabled={!(current + 1 < projects.length)} onClick={() => handlePaging(EPagingTypes.NEXT)} >
+						<SNext />
 					</SIconContainer>
 				</SProjectContainer>
+				<SSocialContainer>
+					<div onClick={() => {
+					window.open("https://www.instagram.com/danicolms_art/", '_blank');
+				}}>
+					<SImage src={instagram}/>
+					</div>
+					<div onClick={() => {
+					window.open("https://github.com/danicolms", '_blank');
+				}}>
+					<SImage src={github}/>
+					</div>
+				</SSocialContainer>
+				<SCredit> Icons by FreePik - Flaticon </SCredit>
 			</SContainer>
 		</SBackground>
 	);

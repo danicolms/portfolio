@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import theme from './theme';
+interface IIconContainerProps {
+	disabled: boolean;
+}
 
 export const SBackground = styled.main`
 	width: 100%;
@@ -31,8 +34,7 @@ export const STitle = styled.h1`
 			font-size: 64px;
 		}
 	}
-
-	font-family: 'Space Mono', monospace;
+	font-family: 'Roboto Mono', monospace;
 	font-weight: bold;
 	opacity: 75%;
 	margin: 0;
@@ -54,17 +56,54 @@ export const SProjectContainer = styled.section`
 	max-width: 25em;
 `;
 
-export const SIconContainer = styled.div`
-	cursor: pointer;
-	opacity: .7;
+export const SIconContainer =
+	styled.div <
+	IIconContainerProps >
+	`
+	cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
+	opacity: ${(props) => (props.disabled ? '.06' : '.35')};
+
 
 	background-color: transparent;
+
+		${(props) =>
+			!props.disabled &&
+			`
+		 &:hover {
+		 	transition: background-color .4s ease-out;
+		 	background-color: ${theme.colors.yellow};
+		 }
+
+		 &:active {
+			background-color: black;
+		 }
+		 `}
+`;
+
+export const SSocialContainer = styled.div`
+	display: flex;
+	justify-content: center;
+	margin-top: 4.5em;
+`;
+
+export const SImage = styled.img`
+	width: 1.5em;
+	object-fit: contain;
+	opacity: 20%;
+	margin: 1em;
+	cursor: pointer;
+	padding: .1em;
+	border-radius: 3px;
+
 	&:hover {
-		transition: background-color .4s ease-out;
+		width: 1.7em;
 		background-color: ${theme.colors.yellow};
 	}
+`;
 
-	&:active {
-		background-color: black;
-	}
+export const SCredit = styled.span`
+	font-family: 'Roboto Mono', monospace;
+	font-size: 9px;
+	opacity: 20%;
+	margin: .3em;
 `;
