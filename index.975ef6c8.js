@@ -25117,22 +25117,24 @@ let EPagingTypes;
 })(EPagingTypes || (EPagingTypes = {}));
 const projects = [
     {
-        title: 'LA CAJA',
+        title: 'la caja',
         src: 'https://danicolms.github.io/rotating-box/',
         emoji: '📦'
     },
     {
-        title: 'EL RELOJ',
+        title: 'el reloj',
         src: 'https://danicolms.github.io/word-clock/',
         emoji: '🕰️'
     },
     {
-        title: 'LINEAS CRUZADAS',
+        title: 'lineas cruzadas',
         src: 'https://danicolms.github.io/intersecting-lines/',
         emoji: '🔀'
     }
 ];
-console.log('Running v1.0.1');
+console.log('💡 Running v1.0.2'); // Images URL
+const instagram = new URL(require("8b7caf548e835d59"));
+const github = new URL(require("9badf85580eb3d4a"));
 const App = ()=>{
     _s();
     const [current, setCurrent] = _react.useState(0);
@@ -25147,25 +25149,26 @@ const App = ()=>{
         children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SContainer, {
             children: [
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.STitle, {
-                    children: " Mis proyectos"
+                    children: " @danicolms "
                 }, void 0, false, {
                     fileName: "src/App.tsx",
-                    lineNumber: 41,
+                    lineNumber: 44,
                     columnNumber: 5
                 }, undefined),
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SProjectContainer, {
                     children: [
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SIconContainer, {
+                            disabled: !(current - 1 >= 0),
                             onClick: ()=>handlePaging(EPagingTypes.PREVIOUS)
                             ,
                             children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_previous.SPrevious, {}, void 0, false, {
                                 fileName: "src/App.tsx",
-                                lineNumber: 44,
+                                lineNumber: 47,
                                 columnNumber: 7
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 43,
+                            lineNumber: 46,
                             columnNumber: 6
                         }, undefined),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_indexDefault.default, {
@@ -25174,37 +25177,85 @@ const App = ()=>{
                             emoji: projects[current].emoji
                         }, void 0, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 47,
+                            lineNumber: 50,
                             columnNumber: 6
                         }, undefined),
                         /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SIconContainer, {
-                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_next.SNext, {
-                                onClick: ()=>handlePaging(EPagingTypes.NEXT)
-                            }, void 0, false, {
+                            disabled: !(current + 1 < projects.length),
+                            onClick: ()=>handlePaging(EPagingTypes.NEXT)
+                            ,
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_next.SNext, {}, void 0, false, {
                                 fileName: "src/App.tsx",
-                                lineNumber: 49,
+                                lineNumber: 52,
                                 columnNumber: 7
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/App.tsx",
-                            lineNumber: 48,
+                            lineNumber: 51,
                             columnNumber: 6
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/App.tsx",
-                    lineNumber: 42,
+                    lineNumber: 45,
+                    columnNumber: 5
+                }, undefined),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SSocialContainer, {
+                    children: [
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                            onClick: ()=>{
+                                window.open("https://www.instagram.com/danicolms_art/", '_blank');
+                            },
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SImage, {
+                                src: instagram
+                            }, void 0, false, {
+                                fileName: "src/App.tsx",
+                                lineNumber: 59,
+                                columnNumber: 6
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/App.tsx",
+                            lineNumber: 56,
+                            columnNumber: 6
+                        }, undefined),
+                        /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
+                            onClick: ()=>{
+                                window.open("https://github.com/danicolms", '_blank');
+                            },
+                            children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SImage, {
+                                src: github
+                            }, void 0, false, {
+                                fileName: "src/App.tsx",
+                                lineNumber: 64,
+                                columnNumber: 6
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/App.tsx",
+                            lineNumber: 61,
+                            columnNumber: 6
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/App.tsx",
+                    lineNumber: 55,
+                    columnNumber: 5
+                }, undefined),
+                /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_appStyles.SCredit, {
+                    children: " Icons by FreePik - Flaticon "
+                }, void 0, false, {
+                    fileName: "src/App.tsx",
+                    lineNumber: 67,
                     columnNumber: 5
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/App.tsx",
-            lineNumber: 40,
+            lineNumber: 43,
             columnNumber: 4
         }, undefined)
     }, void 0, false, {
         fileName: "src/App.tsx",
-        lineNumber: 39,
+        lineNumber: 42,
         columnNumber: 10
     }, undefined);
 };
@@ -25218,7 +25269,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./App.styles":"cvbPE","./components/Next":"9hsXD","./components/Previous":"2ZLok","./components/Project/index":"ePIR4","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cvbPE":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./App.styles":"cvbPE","./components/Next":"9hsXD","./components/Previous":"2ZLok","./components/Project/index":"ePIR4","8b7caf548e835d59":"e9kR3","9badf85580eb3d4a":"1sTnw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cvbPE":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "SBackground", ()=>SBackground
@@ -25230,6 +25281,12 @@ parcelHelpers.export(exports, "STitle", ()=>STitle
 parcelHelpers.export(exports, "SProjectContainer", ()=>SProjectContainer
 );
 parcelHelpers.export(exports, "SIconContainer", ()=>SIconContainer
+);
+parcelHelpers.export(exports, "SSocialContainer", ()=>SSocialContainer
+);
+parcelHelpers.export(exports, "SImage", ()=>SImage
+);
+parcelHelpers.export(exports, "SCredit", ()=>SCredit
 );
 var _styledComponents = require("styled-components");
 var _styledComponentsDefault = parcelHelpers.interopDefault(_styledComponents);
@@ -25253,7 +25310,7 @@ const STitle = _styledComponentsDefault.default.h1.withConfig({
     displayName: "Appstyles__STitle",
     componentId: "sc-pm5joj-2"
 })([
-    "@media (min-width:480px){&{font-size:64px;}}font-family:'Space Mono',monospace;font-weight:bold;opacity:75%;margin:0;margin-bottom:.5em;margin-top:.3em;font-size:40px;color:black;user-select:none;text-align:center;line-height:1;"
+    "@media (min-width:480px){&{font-size:64px;}}font-family:'Roboto Mono',monospace;font-weight:bold;opacity:75%;margin:0;margin-bottom:.5em;margin-top:.3em;font-size:40px;color:black;user-select:none;text-align:center;line-height:1;"
 ]);
 const SProjectContainer = _styledComponentsDefault.default.section.withConfig({
     displayName: "Appstyles__SProjectContainer",
@@ -25265,9 +25322,42 @@ const SIconContainer = _styledComponentsDefault.default.div.withConfig({
     displayName: "Appstyles__SIconContainer",
     componentId: "sc-pm5joj-4"
 })([
-    "cursor:pointer;opacity:.7;background-color:transparent;&:hover{transition:background-color .4s ease-out;background-color:",
-    ";}&:active{background-color:black;}"
+    "cursor:",
+    ";opacity:",
+    ";background-color:transparent;",
+    ""
+], (props)=>props.disabled ? 'default' : 'pointer'
+, (props)=>props.disabled ? '.06' : '.35'
+, (props)=>!props.disabled && `
+		 &:hover {
+		 	transition: background-color .4s ease-out;
+		 	background-color: ${_themeDefault.default.colors.yellow};
+		 }
+
+		 &:active {
+			background-color: black;
+		 }
+		 `
+);
+const SSocialContainer = _styledComponentsDefault.default.div.withConfig({
+    displayName: "Appstyles__SSocialContainer",
+    componentId: "sc-pm5joj-5"
+})([
+    "display:flex;justify-content:center;margin-top:4.5em;"
+]);
+const SImage = _styledComponentsDefault.default.img.withConfig({
+    displayName: "Appstyles__SImage",
+    componentId: "sc-pm5joj-6"
+})([
+    "width:1.5em;object-fit:contain;opacity:20%;margin:1em;cursor:pointer;padding:.1em;border-radius:3px;&:hover{width:1.7em;background-color:",
+    ";}"
 ], _themeDefault.default.colors.yellow);
+const SCredit = _styledComponentsDefault.default.span.withConfig({
+    displayName: "Appstyles__SCredit",
+    componentId: "sc-pm5joj-7"
+})([
+    "font-family:'Roboto Mono',monospace;font-size:9px;opacity:20%;margin:.3em;"
+]);
 
 },{"styled-components":"1U3k6","./theme":"ciFvo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1U3k6":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27311,14 +27401,15 @@ const SCaption = _styledComponentsDefault.default.span.withConfig({
     displayName: "styles__SCaption",
     componentId: "sc-1gc2ao3-1"
 })([
-    "font-family:'Space Mono',monospace;font-weight:bold;opacity:75%;margin:.5em;margin-top:1.5em;font-size:24px;color:black;user-select:none;text-align:center;line-height:1;"
-]);
+    "font-family:'Roboto Mono',monospace;font-weight:bold;opacity:75%;margin:.5em;margin-top:1.5em;font-size:20px;color:",
+    ";user-select:none;text-align:center;line-height:1;"
+], _themeDefault.default.colors.black);
 const SEmoji = _styledComponentsDefault.default.span.withConfig({
     displayName: "styles__SEmoji",
     componentId: "sc-1gc2ao3-2"
 })([
     "animation:1s ease-out 0s 1 ",
-    ";font-family:'Space Mono',monospace;margin-top:.3em;font-size:120px;color:black;user-select:none;text-align:center;line-height:1;"
+    ";font-family:'Roboto Mono',monospace;margin-top:.3em;font-size:120px;color:black;user-select:none;text-align:center;line-height:1;"
 ], appear);
 const SButton = _styledComponentsDefault.default.button.withConfig({
     displayName: "styles__SButton",
@@ -27326,10 +27417,50 @@ const SButton = _styledComponentsDefault.default.button.withConfig({
 })([
     "border:1px solid ",
     ";color:",
-    ";background:transparent;font-family:'Space Mono',monospace;font-size:16px;max-width:160px;padding:.4em 3em;border-radius:2px;cursor:pointer;transition:padding .2s ease-out,border-width .2s ease-out;&:hover{font-weight:bold;padding:.4em 4em;outline-width:1.5px;border-width:1.5px;outline-style:solid;outline-width:1px;outline-color:",
+    ";background:transparent;font-family:'Space Mono',monospace;font-size:14px;max-width:160px;padding:.4em 3em;border-radius:2px;cursor:pointer;transition:padding .2s ease-out,border-width .2s ease-out;&:hover{font-weight:bold;padding:.4em 4em;outline-width:1.5px;border-width:1.5px;outline-style:solid;outline-width:1px;outline-color:",
     ";}"
 ], _themeDefault.default.colors.black, _themeDefault.default.colors.black, _themeDefault.default.colors.yellow);
 
-},{"styled-components":"1U3k6","../../theme":"ciFvo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lW6qc":[function() {},{}]},["kn9T2","7fmqN","8lqZg"], "8lqZg", "parcelRequire8d9d")
+},{"styled-components":"1U3k6","../../theme":"ciFvo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"e9kR3":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "instagram.e5f31372.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp|(chrome|moz)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp|(chrome|moz)-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp|(chrome|moz)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"1sTnw":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('bLxZJ') + "github.670dd962.png" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"lW6qc":[function() {},{}]},["kn9T2","7fmqN","8lqZg"], "8lqZg", "parcelRequire8d9d")
 
 //# sourceMappingURL=index.975ef6c8.js.map
