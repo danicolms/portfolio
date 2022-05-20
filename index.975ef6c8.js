@@ -25402,13 +25402,13 @@ const STitle = _styledComponentsDefault.default.h1.withConfig({
     displayName: "Appstyles__STitle",
     componentId: "sc-pm5joj-2"
 })([
-    "font-family:'Space Mono',monospace;font-weight:bold;opacity:75%;margin:0;margin-bottom:.5em;margin-top:.3em;font-size:64px;color:black;user-select:none;text-align:center;line-height:1;"
+    "@media (min-width:480px){&{font-size:64px;}}font-family:'Space Mono',monospace;font-weight:bold;opacity:75%;margin:0;margin-bottom:.5em;margin-top:.3em;font-size:40px;color:black;user-select:none;text-align:center;line-height:1;"
 ]);
 const SProjectContainer = _styledComponentsDefault.default.section.withConfig({
     displayName: "Appstyles__SProjectContainer",
     componentId: "sc-pm5joj-3"
 })([
-    "display:flex;align-items:center;justify-content:space-between;margin-top:2.5em;width:45%;"
+    "display:flex;align-items:center;justify-content:space-between;margin-top:2.5em;width:100%;max-width:25em;"
 ]);
 const SIconContainer = _styledComponentsDefault.default.div.withConfig({
     displayName: "Appstyles__SIconContainer",
