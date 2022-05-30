@@ -3,6 +3,7 @@
         "module": "esnext",
 		"jsx": "react",
         "isolatedModules": true,
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "moduleResolution": "Node"
     }
 }

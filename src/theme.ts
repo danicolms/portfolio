@@ -1,14 +1,14 @@
 interface IColors {
     black: string;
     white: string;
-    yellow: string;
+    grey: string;
 
 }
 
 const colors: IColors = {
     black: "#3F3F3F",
     white: "#FBFAF8",
-    yellow: "#FCCF59"
+    grey: "#AAAAAA"
 
 }
 
