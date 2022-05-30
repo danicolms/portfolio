@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { motion } from 'framer-motion';
+
 import theme from '../../theme';
 
-export const SBackground = styled.main`
+export const SBackground = styled.div`
 	width: 100%;
 	height: 100%;
 
@@ -12,8 +12,6 @@ export const SBackground = styled.main`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-
-	background-color: ${theme.colors.white};
 `;
 
 export const STitle = styled.h1`
@@ -26,17 +24,6 @@ export const SSubtitle = styled.h3`
 	text-align: center;
 	font-size: 1em;
 	color: ${theme.colors.grey};
-`;
-
-export const SWord = styled(motion.span)`
- display: inline-block;
-  margin-right: 0.25em;
-  white-space: nowrap;
-`;
-
-export const SCharacter = styled(motion.span)`
-  display: inline-block;
-  margin-right: -0.05em;
 `;
 
 export const SSocialContainer = styled.section`
@@ -52,6 +39,9 @@ export const SSocialIcon = styled.img`
 	cursor: pointer;
 	padding: .1em;
 	border-radius: 3px;
+background-color: transparent;
+
+	transition: background-color .5s;
 	&:hover {
 		background-color: ${theme.colors.grey};
 	}
