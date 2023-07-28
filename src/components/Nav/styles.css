@@ -5,3 +5,7 @@
 .nav__items {
   list-style: none;
 }
+
+.nav__item--selected {
+  background-color: red;
+}

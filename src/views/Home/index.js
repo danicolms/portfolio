@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import { Nav } from "../../components";
+
 import "./styles.css";
 
 const sections = [

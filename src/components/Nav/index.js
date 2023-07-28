@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
+
 import "./styles.css";
 
 Nav.propTypes = {
@@ -16,7 +18,12 @@ function Nav({ sections, currentSection, setCurrentSection }) {
 
       <ul className="nav__items">
         {sections.map((section) => (
-          <li key={section.key} className="nav__item">
+          <li
+            key={section.key}
+            className={classNames("nav__item", {
+              ["nav__item--selected"]: section.key === currentSection.key,
+            })}
+          >
             <button onClick={() => setCurrentSection(section)}>
               {section.value}
             </button>
