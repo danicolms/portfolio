@@ -25,12 +25,14 @@
 .viewer__content {
   flex: 3;
 
+  padding-left: 1.8em;
+
   background: rgba(var(--grey), 0.16);
 
   border: 1px solid rgba(var(--grey), 0.12);
   border-top-right-radius: 0.8em;
   border-bottom-right-radius: 0.8em;
 
-  box-shadow: 0 8px 32px 0 rgba(var(--black), 0.2);
+  box-shadow: 8px 8px 32px 0 rgba(var(--black), 0.1);
   backdrop-filter: blur(0.4em);
 }
