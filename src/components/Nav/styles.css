@@ -1,0 +1,7 @@
+.viewer__nav {
+  flex: 1;
+}
+
+.nav__items {
+  list-style: none;
+}

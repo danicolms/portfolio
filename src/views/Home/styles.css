@@ -15,10 +15,6 @@
   border: 1px solid black;
 }
 
-.viewer__nav {
-  flex: 1;
-}
-
 .viewer__content {
   flex: 3;
 }
