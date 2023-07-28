@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { Nav } from "../../components";
 import "./styles.css";
-import Nav from "../../components/Nav";
 
 const sections = [
   { key: "home", value: "Home" },
