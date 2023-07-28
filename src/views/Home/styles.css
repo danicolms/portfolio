@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.viewer {
+  max-width: 75vh;
+  flex: 1;
+  display: flex;
+}
+
+.viewer__item {
+  border: 1px solid black;
+}
+
+.viewer__nav {
+  flex: 1;
+}
+
+.viewer__content {
+  flex: 3;
+}
