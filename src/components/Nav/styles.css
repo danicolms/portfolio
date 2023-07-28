@@ -6,6 +6,10 @@
   list-style: none;
 }
 
+.nav__item {
+  display: block;
+}
+
 .nav__item--selected {
   background-color: red;
 }
