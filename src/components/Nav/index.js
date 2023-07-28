@@ -13,9 +13,6 @@ Nav.propTypes = {
 function Nav({ sections, currentSection, setCurrentSection }) {
   return (
     <nav className="viewer__item viewer__nav">
-      <h3 className="nav__title"> {currentSection.value} </h3>
-      <hr />
-
       <ul className="nav__items">
         {sections.map((section) => (
           <li key={section.key}>

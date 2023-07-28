@@ -1,5 +1,14 @@
 .viewer__nav {
   flex: 1;
+
+  background: rgba(var(--grey), 0.36);
+
+  border: 1px solid rgba(var(--grey), 0.18);
+  border-top-left-radius: 0.8em;
+  border-bottom-left-radius: 0.8em;
+
+  box-shadow: 0 8px 32px 0 rgba(var(--black), 0.4);
+  backdrop-filter: blur(0.4em);
 }
 
 .nav__items {
@@ -8,8 +17,28 @@
 
 .nav__item {
   display: block;
+
+  padding: 0.2em;
+  padding-left: 0.8em;
+
+  margin: 0.2em 0;
+
+  background: transparent;
+
+  border-radius: 0.2em;
+
+  cursor: pointer;
+
+  transition: all ease 0.2s;
+}
+
+.nav__item:hover {
+  background: rgba(var(--white), 0.32);
 }
 
 .nav__item--selected {
-  background-color: red;
+  background: rgba(var(--white), 0.44);
+
+  font-style: italic;
+  font-weight: bold;
 }

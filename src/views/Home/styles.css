@@ -2,17 +2,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   height: 100vh;
 }
 
 .viewer {
-  max-width: 75vh;
   flex: 1;
   display: flex;
+
+  max-width: 75vh;
 }
 
 .viewer__item {
-  border: 1px solid black;
+  padding: 1.2em;
 }
 
 .viewer__content {
