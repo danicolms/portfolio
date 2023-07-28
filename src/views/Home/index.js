@@ -2,12 +2,14 @@ import React, { useState } from "react";
 
 import { Nav } from "../../components";
 
+import { Landing } from "../";
+
 import "./styles.css";
 
 const sections = [
-  { key: "home", value: "Home" },
-  { key: "projects", value: "Projects" },
-  { key: "contact", value: "Contact me" },
+  { key: "home", value: "Home", view: <Landing /> },
+  { key: "projects", value: "Projects", view: <div> Project </div> },
+  { key: "contact", value: "Contact me", view: <div> Contact me </div> },
 ];
 
 const Home = () => {
@@ -21,7 +23,9 @@ const Home = () => {
           currentSection={currentSection}
           setCurrentSection={setCurrentSection}
         />
-        <section className="viewer__item viewer__content" />
+        <section className="viewer__item viewer__content">
+          {currentSection.view}
+        </section>
       </div>
     </div>
   );

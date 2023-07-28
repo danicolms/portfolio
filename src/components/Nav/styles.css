@@ -7,7 +7,7 @@
   border-top-left-radius: 0.8em;
   border-bottom-left-radius: 0.8em;
 
-  box-shadow: 0 8px 32px 0 rgba(var(--black), 0.4);
+  box-shadow: 0 8px 32px 0 rgba(var(--black), 0.3);
   backdrop-filter: blur(0.4em);
 }
 
