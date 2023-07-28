@@ -4,7 +4,7 @@ import "./styles.css";
 const Landing = () => {
   return (
     <Fragment>
-      <h2 className="lading__title"> Hello! </h2>
+      <h2 className="landing__title"> Hello! </h2>
       <p>
         I'm <b>Dani</b>, a full-stack developer based in Santander, Spain.
       </p>
