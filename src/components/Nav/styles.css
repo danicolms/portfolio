@@ -1,0 +1,15 @@
+.viewer__nav {
+  flex: 1;
+}
+
+.nav__items {
+  list-style: none;
+}
+
+.nav__item {
+  display: block;
+}
+
+.nav__item--selected {
+  background-color: red;
+}
