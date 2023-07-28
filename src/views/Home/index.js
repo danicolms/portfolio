@@ -21,7 +21,7 @@ const Home = () => {
           currentSection={currentSection}
           setCurrentSection={setCurrentSection}
         />
-        <section className="viewer__item viewer__content"> Is Content </section>
+        <section className="viewer__item viewer__content" />
       </div>
     </div>
   );
