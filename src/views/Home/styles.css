@@ -5,7 +5,7 @@
 
   height: 100vh;
 
-  background: lightseagreen;
+  background: salmon;
 }
 
 .viewer {
@@ -35,11 +35,4 @@
 
   box-shadow: 8px 8px 32px 0 rgba(var(--black), 0.1);
   backdrop-filter: blur(0.4em);
-}
-
-.content__title {
-  margin-bottom: 0.6em;
-
-  font-size: 1.6em;
-  font-style: italic;
 }

@@ -1,0 +1,43 @@
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project__item {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+
+  min-width: 10em;
+
+  padding: 1em 0.4em;
+  margin-bottom: 1.2em;
+
+  color: rgb(var(--black));
+  background: transparent;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: all ease 0.2s;
+}
+
+.project__item:hover {
+  background: rgba(var(--white), 0.2);
+
+  border-radius: 0.4em;
+}
+
+.project__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 0.4em;
+}
+
+.project__value {
+  text-align: center;
+}
