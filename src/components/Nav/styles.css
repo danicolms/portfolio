@@ -1,3 +1,17 @@
+@keyframes slideintop {
+  from {
+    opacity: 0%;
+
+    margin-bottom: -3em;
+  }
+
+  to {
+    opacity: 100%;
+
+    margin-bottom: 0;
+  }
+}
+
 .viewer__nav {
   flex: 1;
 
@@ -16,6 +30,8 @@
 }
 
 .nav__item {
+  opacity: 0%;
+
   display: block;
 
   padding: 0.2em;
@@ -30,6 +46,8 @@
   cursor: pointer;
 
   transition: all ease 0.2s;
+
+  animation: 0.6s ease 1.2s normal forwards slideintop;
 }
 
 .nav__item:hover {

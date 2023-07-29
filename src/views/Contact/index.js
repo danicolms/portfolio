@@ -81,17 +81,19 @@ const Contact = () => {
   return (
     <Fragment>
       <Title> Contact me </Title>
-      {contactMethods.map((contactMethod) => (
-        <a
-          key={contactMethod.key}
-          className="contact__item"
-          target="_blank"
-          href={contactMethod.url}
-        >
-          <i className="contact__icon">{contactMethod.icon}</i>
-          <span className="contact__value"> {contactMethod.value}</span>
-        </a>
-      ))}
+      <div className="content__container">
+        {contactMethods.map((contactMethod) => (
+          <a
+            key={contactMethod.key}
+            className="contact__item"
+            target="_blank"
+            href={contactMethod.url}
+          >
+            <i className="contact__icon">{contactMethod.icon}</i>
+            <span className="contact__value"> {contactMethod.value}</span>
+          </a>
+        ))}
+      </div>
     </Fragment>
   );
 };

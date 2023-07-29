@@ -9,13 +9,15 @@
 }
 
 .container {
+  --background-color: salmon;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
   height: 100vh;
 
-  background: salmon;
+  background: var(--background-color);
 }
 
 .viewer {
@@ -47,6 +49,12 @@
 
   box-shadow: 8px 8px 32px 0 rgba(var(--black), 0.1);
   backdrop-filter: blur(0.4em);
+}
+
+.content__container {
+  opacity: 0%;
+
+  animation: 0.8s ease-in-out 0.6s normal forwards fadein;
 }
 
 @media (width <= 600px) {
