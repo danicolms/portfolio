@@ -9,7 +9,7 @@
 }
 
 .background {
-  --background-color: salmon;
+  --background-color: palevioletred;
 
   display: flex;
   justify-content: center;
