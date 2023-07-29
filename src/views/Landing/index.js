@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 
+import { Title } from "../../components";
+
 const Landing = () => {
   return (
     <Fragment>
