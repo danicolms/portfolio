@@ -1,0 +1,82 @@
+@keyframes fadein {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
+.background {
+  --background-color: palevioletred;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  background: var(--background-color);
+
+  cursor: pointer;
+}
+
+.viewer {
+  flex: 1;
+  display: flex;
+
+  max-width: 75vh;
+  min-height: 30em;
+
+  margin: 0.8em;
+
+  animation: 0.2s ease-in-out fadein;
+}
+
+.viewer__item {
+  padding: 1.2em;
+}
+
+.viewer__content {
+  flex: 3;
+
+  padding-left: 1.8em;
+
+  background: rgba(var(--grey), 0.16);
+
+  border: 1px solid rgba(var(--grey), 0.12);
+  border-top-right-radius: 0.8em;
+  border-bottom-right-radius: 0.8em;
+
+  box-shadow: 8px 8px 32px 0 rgba(var(--black), 0.1);
+  backdrop-filter: blur(0.4em);
+}
+
+.content__container {
+  opacity: 0%;
+
+  animation: 0.8s ease-in-out 0.6s normal forwards fadein;
+}
+
+.floating__caption {
+  position: absolute;
+  bottom: 2%;
+
+  color: rgba(var(--black), 0.44);
+
+  font-size: 1em;
+}
+@media (width <= 600px) {
+  .viewer {
+    flex-direction: column;
+  }
+
+  .viewer__item {
+    border-radius: 0.8em;
+  }
+
+  .viewer__content {
+    min-height: 30em;
+  }
+}

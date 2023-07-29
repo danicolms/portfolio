@@ -1,0 +1,28 @@
+@keyframes slideinleft {
+  0% {
+    opacity: 0%;
+
+    margin-left: -2em;
+  }
+
+  60% {
+    opacity: 10%;
+  }
+
+  100% {
+    opacity: 100%;
+
+    margin-left: 0;
+  }
+}
+
+.content__title {
+  opacity: 0%;
+
+  margin-bottom: 0.6em;
+
+  font-size: 1.6em;
+  font-style: italic;
+
+  animation: 0.4s ease-out 0.2s normal forwards slideinleft;
+}

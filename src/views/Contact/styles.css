@@ -1,0 +1,34 @@
+.contact__item {
+  display: flex;
+  align-items: center;
+
+  width: fit-content;
+
+  padding: 0.4em;
+  margin-bottom: 1.2em;
+
+  color: rgb(var(--black));
+  background: transparent;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: all ease 0.2s;
+}
+
+.contact__item:hover {
+  background: rgba(var(--white), 0.2);
+
+  border-radius: 0.4em;
+}
+
+.contact__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact__value {
+  margin-left: 0.4em;
+}
