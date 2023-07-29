@@ -59,14 +59,6 @@
   animation: 0.8s ease-in-out 0.6s normal forwards fadein;
 }
 
-.floating__caption {
-  position: absolute;
-  bottom: 2%;
-
-  color: rgba(var(--black), 0.44);
-
-  font-size: 1em;
-}
 @media (width <= 600px) {
   .viewer {
     flex-direction: column;
