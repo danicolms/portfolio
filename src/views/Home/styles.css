@@ -1,3 +1,13 @@
+@keyframes fadein {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -16,6 +26,8 @@
   min-height: 30em;
 
   margin: 0.8em;
+
+  animation: 0.2s ease-in-out fadein;
 }
 
 .viewer__item {
