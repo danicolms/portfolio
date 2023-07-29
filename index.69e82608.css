@@ -6,7 +6,6 @@
 
   to {
     opacity: 1;
-    margin-bottom: 0;
   }
 }
 
@@ -49,7 +48,9 @@
 
 @media (width <= 600px) {
   .viewer__nav {
+    opacity: 0;
     margin-bottom: 1.2em;
+    animation: .2s 1.2s forwards fadein;
   }
 }
 
@@ -106,20 +107,15 @@
   margin-left: .4em;
 }
 
-.projects {
-  flex-wrap: wrap;
-  display: flex;
-}
-
 .project__item {
   color: rgb(var(--black));
   cursor: pointer;
   background: none;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 10em;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
   margin-bottom: 1.2em;
-  padding: 1em .4em;
+  padding: .4em;
   text-decoration: none;
   transition: all .2s;
   display: flex;
@@ -133,12 +129,11 @@
 .project__icon {
   justify-content: center;
   align-items: center;
-  margin-bottom: .4em;
   display: flex;
 }
 
 .project__value {
-  text-align: center;
+  margin-left: .4em;
 }
 
 @keyframes fadein {

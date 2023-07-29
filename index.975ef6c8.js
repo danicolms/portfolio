@@ -28937,7 +28937,7 @@ const Projects = ()=>{
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
-                className: "projects content__container",
+                className: "content__container",
                 children: projects.map((project)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                         className: "project__item",
                         target: "_blank",
