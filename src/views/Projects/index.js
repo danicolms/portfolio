@@ -147,12 +147,12 @@ const projects = [
     url: "https://danicolms.github.io/word-clock/",
     icon: wordClockIcon,
   },
-  {
-    key: "girih",
-    value: "Girih",
-    url: "https://danicolms.github.io/girih/",
-    icon: girihIcon,
-  },
+  // {
+  //   key: "girih",
+  //   value: "Girih",
+  //   url: "https://danicolms.github.io/girih/",
+  //   icon: girihIcon,
+  // },
   {
     key: "cube",
     value: "Cube",
