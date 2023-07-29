@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 const Landing = () => {
   return (
     <Fragment>
-      <h2 className="content__title"> Hello! </h2>
+      <Title> Hello! </Title>
       <p>
         I'm <b>Dani</b>, a full-stack developer based in Santander, Spain.
       </p>

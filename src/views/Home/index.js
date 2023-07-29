@@ -2,13 +2,13 @@ import React, { useState } from "react";
 
 import { Nav } from "../../components";
 
-import { Landing, Contact } from "../";
+import { Landing, Contact, Projects } from "../";
 
 import "./styles.css";
 
 const sections = [
   { key: "home", value: "Home", view: <Landing /> },
-  { key: "projects", value: "Projects", view: <div> Project </div> },
+  { key: "projects", value: "Projects", view: <Projects /> },
   { key: "contact", value: "Contact me", view: <Contact /> },
 ];
 

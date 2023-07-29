@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 
+import { Title } from "../../components";
+
 import "./styles.css";
 
 const gitIcon = (
@@ -78,7 +80,7 @@ const contactMethods = [
 const Contact = () => {
   return (
     <Fragment>
-      <h2 className="content__title"> Contact me </h2>
+      <Title> Contact me </Title>
       {contactMethods.map((contactMethod) => (
         <a className="contact__item" target="_blank" href={contactMethod.url}>
           <i className="contact__icon">{contactMethod.icon}</i>
