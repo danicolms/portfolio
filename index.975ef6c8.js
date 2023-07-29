@@ -27199,34 +27199,13 @@ var _components = require("../../components");
 var _ = require("../");
 var _stylesCss = require("./styles.css");
 var _s = $RefreshSig$();
-const prettyColors = [
-    "lightcoral",
-    "salmon",
-    "hotpink",
-    "palevioletred",
-    "tomato",
-    "moccasin",
-    "darkkhaki",
-    "lavender",
-    "plum",
-    "mediumorchid",
-    "mediumslateblue",
-    "palegreen",
-    "mediumaquamarine",
-    "teal",
-    "powderblue",
-    "lightskyblue",
-    "navajowhite",
-    "chocolate",
-    "lavenderblush"
-];
 const sections = [
     {
         key: "home",
         value: "Home",
         view: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _.Landing), {}, void 0, false, {
             fileName: "src/views/Home/index.js",
-            lineNumber: 32,
+            lineNumber: 10,
             columnNumber: 39
         }, undefined)
     },
@@ -27235,7 +27214,7 @@ const sections = [
         value: "Projects",
         view: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _.Projects), {}, void 0, false, {
             fileName: "src/views/Home/index.js",
-            lineNumber: 33,
+            lineNumber: 11,
             columnNumber: 47
         }, undefined)
     },
@@ -27244,7 +27223,7 @@ const sections = [
         value: "Contact me",
         view: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _.Contact), {}, void 0, false, {
             fileName: "src/views/Home/index.js",
-            lineNumber: 34,
+            lineNumber: 12,
             columnNumber: 48
         }, undefined)
     }
@@ -27252,69 +27231,62 @@ const sections = [
 function Home() {
     _s();
     const [currentSection, setCurrentSection] = (0, _react.useState)(sections[0]);
-    const [backgroundColor, setBackgroundColor] = (0, _react.useState)(prettyColors[0]);
-    const [lastColor, setLastColor] = (0, _react.useState)(backgroundColor);
-    const changeBackgroundColor = ()=>{
-        let color = backgroundColor;
-        while(color === backgroundColor)color = prettyColors[Math.floor(Math.random() * prettyColors.length)];
-        setBackgroundColor(color);
+    const changeBackgroundColor = (currentSection)=>{
+        const background = document.querySelector(".background");
+        let color;
+        switch(currentSection.key){
+            case "projects":
+                color = "plum";
+                break;
+            case "contact":
+                color = "lightskyblue";
+                break;
+            default:
+                color = "lightcoral";
+                break;
+        }
+        background.style.setProperty("--background-color", color);
     };
     (0, _react.useEffect)(()=>{
-        if (lastColor !== backgroundColor) {
-            setLastColor(backgroundColor);
-            const background = document.querySelector(".background");
-            background.style.setProperty("--background-color", backgroundColor);
-        }
+        changeBackgroundColor(currentSection);
     }, [
-        backgroundColor,
-        lastColor
+        currentSection
     ]);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        onClick: changeBackgroundColor,
         className: "background",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "viewer",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _components.Nav), {
-                        sections: sections,
-                        currentSection: currentSection,
-                        setCurrentSection: setCurrentSection
-                    }, void 0, false, {
-                        fileName: "src/views/Home/index.js",
-                        lineNumber: 61,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
-                        className: "viewer__item viewer__content",
-                        children: currentSection.view
-                    }, void 0, false, {
-                        fileName: "src/views/Home/index.js",
-                        lineNumber: 66,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/views/Home/index.js",
-                lineNumber: 60,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "floating__caption",
-                children: "Don't like the current color? Click anywhere"
-            }, void 0, false, {
-                fileName: "src/views/Home/index.js",
-                lineNumber: 71,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "viewer",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _components.Nav), {
+                    sections: sections,
+                    currentSection: currentSection,
+                    setCurrentSection: setCurrentSection
+                }, void 0, false, {
+                    fileName: "src/views/Home/index.js",
+                    lineNumber: 44,
+                    columnNumber: 9
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                    className: "viewer__item viewer__content",
+                    children: currentSection.view
+                }, void 0, false, {
+                    fileName: "src/views/Home/index.js",
+                    lineNumber: 49,
+                    columnNumber: 9
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/views/Home/index.js",
+            lineNumber: 43,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
         fileName: "src/views/Home/index.js",
-        lineNumber: 59,
+        lineNumber: 42,
         columnNumber: 5
     }, this);
 }
-_s(Home, "c+CJgpqF8lZhfZx2G56hBSUJYdA=");
+_s(Home, "QLudoidWuuWl0kCk75PrnjOJ5ik=");
 _c = Home;
 exports.default = Home;
 var _c;
