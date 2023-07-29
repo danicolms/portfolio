@@ -165,7 +165,7 @@ const Projects = () => {
   return (
     <Fragment>
       <Title> Projects </Title>
-      <section className="projects">
+      <section className="projects content__container">
         {projects.map((project) => (
           <a
             className="project__item"
