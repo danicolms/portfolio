@@ -5,9 +5,9 @@ import classNames from "classnames";
 import "./styles.css";
 
 Nav.propTypes = {
-  sections: PropTypes.arrayOf(PropTypes.object),
-  currentSection: PropTypes.object,
-  setCurrentSection: PropTypes.func,
+  sections: PropTypes.arrayOf(PropTypes.object).isRequired,
+  currentSection: PropTypes.object.isRequired,
+  setCurrentSection: PropTypes.func.isRequired,
 };
 
 function Nav({ sections, currentSection, setCurrentSection }) {

@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "./styles.css";
 
 Title.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.string.isRequired,
 };
 
 function Title({ children }) {

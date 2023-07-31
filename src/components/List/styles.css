@@ -1,4 +1,4 @@
-.contact__item {
+.list__item {
   display: flex;
   align-items: center;
 
@@ -17,18 +17,18 @@
   transition: all ease 0.2s;
 }
 
-.contact__item:hover {
+.list__item:hover {
   background: rgba(var(--white), 0.2);
 
   border-radius: 0.4em;
 }
 
-.contact__icon {
+.list__icon {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contact__value {
+.list__value {
   margin-left: 0.4em;
 }
