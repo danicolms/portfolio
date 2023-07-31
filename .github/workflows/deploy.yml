@@ -31,8 +31,4 @@ jobs:
         run: |
           git config --global user.email "danicolms@icloud.com"
           git config --global user.name "danicolms"
-          git checkout gh-pages
-          cp -r dist/* .
-          git add .
-          git commit -m "Deploy changes"
-          git push --quiet origin gh-pages
+          gh-pages -d dist
