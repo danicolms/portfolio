@@ -1,6 +1,6 @@
 # My Portfolio
 
-[![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/yourusername/your-portfolio/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/danicolms/portfolio/blob/main/LICENSE)
 
 Welcome to my portfolio repository! This project showcases various open source projects I have worked on and serves as a central hub for exploring my GitHub repositories (as well as some professional projects, too). The portfolio is built using React and bundled with Parcel, making it easy to use and deploy.
 
@@ -37,7 +37,7 @@ Follow the instructions below to set up and run the portfolio project on your lo
 
 ### Prerequisites
 
-- Node.js and npm / yarn installed on your computer.
+- Node.js and yarn installed on your computer.
 
 ### Installation
 
