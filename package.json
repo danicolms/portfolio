@@ -24,7 +24,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build --public-url '.' src/index.html",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "gh-pages:deploy": "gh-pages -d dist",
+    "deploy": "branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD); if [[ $branch == \"main\" ]]; then npm run gh-pages:deploy; else echo \"You're only allowed to deploy from the main branch\"; fi;"
   },
   "repository": {
     "type": "git",
@@ -34,5 +35,9 @@
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/danicolms/portfolio/issues"
+  },
+  "engines": {
+    "yarn": ">=1.22.0",
+    "npm": "please-use-yarn"
   }
 }
