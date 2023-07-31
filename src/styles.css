@@ -23,3 +23,8 @@ span,
 h2 {
   color: rgb(var(--black));
 }
+
+svg {
+  width: 28px;
+  height: 28px;
+}
