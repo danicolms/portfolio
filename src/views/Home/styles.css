@@ -18,8 +18,6 @@
   height: 100vh;
 
   background: var(--background-color);
-
-  cursor: pointer;
 }
 
 .viewer {
