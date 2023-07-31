@@ -1,8 +1,6 @@
 import React, { Fragment } from "react";
 
-import { Title } from "../../components";
-
-import "./styles.css";
+import { List, Title } from "../../components";
 
 const gitIcon = (
   <svg
@@ -81,19 +79,7 @@ const Contact = () => {
   return (
     <Fragment>
       <Title> Contact me </Title>
-      <div className="content__container">
-        {contactMethods.map((contactMethod) => (
-          <a
-            key={contactMethod.key}
-            className="contact__item"
-            target="_blank"
-            href={contactMethod.url}
-          >
-            <i className="contact__icon">{contactMethod.icon}</i>
-            <span className="contact__value"> {contactMethod.value}</span>
-          </a>
-        ))}
-      </div>
+      <List items={contactMethods} />
     </Fragment>
   );
 };

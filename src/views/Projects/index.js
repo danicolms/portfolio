@@ -1,8 +1,6 @@
 import React, { Fragment } from "react";
 
-import { Title } from "../../components";
-
-import "./styles.css";
+import { List, Title } from "../../components";
 
 const ucIcon = (
   <svg
@@ -165,19 +163,7 @@ const Projects = () => {
   return (
     <Fragment>
       <Title> Projects </Title>
-      <section className="content__container">
-        {projects.map((project) => (
-          <a
-            className="project__item"
-            key={projects.key}
-            target="_blank"
-            href={project.url}
-          >
-            <i className="project__icon">{project.icon}</i>
-            <span className="project__value"> {project.value}</span>
-          </a>
-        ))}
-      </section>
+      <List items={projects} />
     </Fragment>
   );
 };
