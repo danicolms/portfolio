@@ -62,6 +62,10 @@
 @media (width <= 600px) {
   .viewer {
     flex-direction: column;
+
+    height: 100%;
+
+    padding: 1em 0;
   }
 
   .viewer__item {
@@ -69,6 +73,6 @@
   }
 
   .viewer__content {
-    min-height: 30em;
+    flex: 6;
   }
 }
