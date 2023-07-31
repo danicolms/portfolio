@@ -9,7 +9,7 @@
 }
 
 .background {
-  --background-color: palevioletred;
+  --background-color: lightcoral;
 
   display: flex;
   justify-content: center;

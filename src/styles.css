@@ -16,3 +16,10 @@ body,
 
   font-family: "Space Mono", monospace;
 }
+
+p,
+a,
+span,
+h2 {
+  color: rgb(var(--black));
+}

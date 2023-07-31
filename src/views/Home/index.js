@@ -21,13 +21,13 @@ function Home() {
 
     switch (currentSection.key) {
       case "projects":
-        color = "plum";
+        color = "#9C90E9";
         break;
       case "contact":
-        color = "lightskyblue";
+        color = "#40E0D0";
         break;
       default:
-        color = "lightcoral";
+        color = "#F08080";
         break;
     }
 
