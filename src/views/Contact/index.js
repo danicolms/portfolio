@@ -1,8 +1,8 @@
-import React, { Fragment } from "react";
+import { Fragment } from "react";
 import {
-  PiEnvelopeFill,
-  PiGithubLogoFill,
-  PiInstagramLogoFill,
+  PiEnvelopeDuotone,
+  PiGithubLogoDuotone,
+  PiInstagramLogoDuotone,
 } from "react-icons/pi";
 
 import { List, Title } from "../../components";
@@ -12,19 +12,19 @@ const contactMethods = [
     key: "git",
     value: "danicolms",
     url: "https://github.com/danicolms",
-    icon: <PiGithubLogoFill />,
+    icon: <PiGithubLogoDuotone />,
   },
   {
     key: "instagram",
     value: "danicolms_art",
     url: "https://www.instagram.com/danicolms_art/",
-    icon: <PiInstagramLogoFill />,
+    icon: <PiInstagramLogoDuotone />,
   },
   {
     key: "email",
     value: "danicolms@icloud.com",
     url: "mailto:danicolms@icloud.com",
-    icon: <PiEnvelopeFill />,
+    icon: <PiEnvelopeDuotone />,
   },
 ];
 
