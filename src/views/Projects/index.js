@@ -12,7 +12,7 @@ const projects = [
   {
     key: "uc",
     value: "UNICAN - Master en tributación",
-    url: "https://www.tributacion.unican.es/2023/",
+    url: "https://www.tributacion.unican.es/",
     icon: <PiCalculatorDuotone />,
   },
   {
