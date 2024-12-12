@@ -16,8 +16,8 @@ const contactMethods = [
   },
   {
     key: "instagram",
-    value: "danicolms_art",
-    url: "https://www.instagram.com/danicolms_art/",
+    value: "danicolms",
+    url: "https://www.instagram.com/danicolms/",
     icon: <PiInstagramLogoDuotone />,
   },
   {
