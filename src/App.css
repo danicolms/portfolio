@@ -1,0 +1,66 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: white;
+}
+
+.draggable-container {
+  height: 60px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+  background: white;
+}
+
+.draggable-square {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #999;
+  background: white;
+  cursor: grab;
+}
+
+.draggable-square:active {
+  cursor: grabbing;
+  border-color: #666;
+}
+
+.grid-container {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  height: calc(100vh - 60px);
+  position: relative;
+}
+
+.grid-square {
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+
+.grid-square.occupied {
+  background: #f5f5f5;
+}
+
+.grid-item {
+  border: 2px solid #666;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  cursor: grab;
+  margin: 2px;
+}
+
+.grid-item:active {
+  cursor: grabbing;
+  border-color: #333;
+}
