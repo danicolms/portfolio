@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "Nafile";
+    src:
+        url("./fonts/Nafile.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Rag";
+    src:
+        url("./fonts/Rag.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --black: darkslategrey;
+}
+
+body {
+    padding: 1em 4em;
+    font-size: 14px;
+    background-color: whitesmoke;
+    color: var(--black);
+    font-family: Rag;
+}
+
+header {
+    display: flex;
+    column-gap: 3em;
+    align-items: center;
+}
+
+header>img {
+    width: 60px;
+    height: 100%;
+    object-fit: contain;
+    border: 2px solid var(--black);
+    padding: .4em;
+    background-color: white;
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-family: Nafile;
+    font-size: 6em;
+    font-weight: 800;
+    letter-spacing: 0.1px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    column-gap: 4em;
+}
+
+li {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.8em;
+    cursor: pointer;
+}
+
+
+li>img {
+    width: 120px;
+    height: 120px;
+}
+
+
+li:hover>img {
+    transform: scale(1.1);
+}
