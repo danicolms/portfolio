@@ -39,7 +39,7 @@ header>img {
     border: 2px solid var(--black);
     padding: .4em;
     background-color: white;
-    margin-bottom: 1em;
+    margin-bottom: 3em;
 }
 
 h1 {
@@ -52,21 +52,30 @@ h1 {
 ul {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
     margin: 0;
     column-gap: 4em;
+    row-gap: 2em;
+    margin-bottom: 4em;
 }
 
 li {
     font-size: 1.5em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     row-gap: 0.8em;
     cursor: pointer;
+    max-width: 160px;
+    width: 160px;
+    text-align: center;
 }
 
+
+#level-2>li {
+    font-size: 1.2em;
+}
 
 li>img {
     width: 120px;
