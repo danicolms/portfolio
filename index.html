@@ -1,24 +1,104 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/animejs/dist/bundles/anime.umd.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="stylesheet" href="index.css" />
-  <script src="index.js" defer></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>portfolio</title>
-</head>
+  <body>
+    <main>
+      <header>
+        <img
+          src="
+        ./avatar.jpeg"
+          alt="danicolms avatar"
+        />
+        <h1 class="animate__animated animate__bounce">hello!</h1>
+      </header>
+      <ul>
+        <li>
+          <a href="https://loscolmebrothers.com">
+            <img
+              src="https://assets.loscolmebrothers.com/logo/shortened/vector.svg"
+              alt="logo LOSCOLMEBROTHERS"
+              aria-hidden="true"
+            />
+            COLMEBROTHERS</a
+          >
+        </li>
+        <li>
+          <a href="https://www.tributacion.unican.es">
+            <img
+              src="https://ihcantabria.com/wp-content/uploads/2022/09/cropped-Logo-Universidad-de-Cantabria.png"
+              alt="Logo UNICAN"
+              aria-hidden="true"
+            />
 
-<body>
-  <main>
-    <header>
-      <h1> Hello! </h1>
-      <img src="
-        ./avatar.jpeg" alt="danicolms avatar" />
-    </header>
-    <ul class="item-list" id="level-1"></ul>
-    <ul class="item-list" id="level-2"></ul>
-  </main>
-</body>
+            UNICAN
+            <small> Master en tributación</small>
+          </a>
+        </li>
+        <li>
+          <a href="https://music.danicolms.xyz">
+            <img src="./colmemusica.png" alt="" aria-hidden="true" />
+            Music
+            <small> colme </small>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/danicolms">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            Github
+          </a>
+        </li>
+        <li>
+          <a href="https://linkedin.com/in/danicolms">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/3840px-LinkedIn_icon.svg.png"
+              alt=""
+              aria-hidden="true"
+            />
+            LinkedIn
+          </a>
+        </li>
+      </ul>
+    </main>
 
+    <script>
+      const { createTimeline, animate, stagger } = anime;
+
+      const tl = createTimeline({
+        defaults: { duration: 500, easing: "easeOutQuad" },
+      });
+
+      tl.add("main", { opacity: [0, 1] }, 0)
+        .add("header > img", { opacity: [0, 1], translateY: [30, 0] }, 100)
+        .add("header > img", {
+          rotate: "1turn",
+          duration: 500,
+          loop: false,
+          ease: "linear",
+        })
+        .add("h1", { opacity: [0, 1], translateY: [10, 0] }, 1200)
+        .add(
+          "li",
+          {
+            opacity: [0, 1],
+            translateY: [16, 0],
+            delay: stagger(80, { from: "first" }),
+            duration: 500,
+            easing: "easeOutQuad",
+          },
+          2000,
+        );
+    </script>
+    <script></script>
+  </body>
 </html>
